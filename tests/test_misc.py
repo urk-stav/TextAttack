@@ -69,3 +69,7 @@ def test_wordnet_augmenter():
     augmented_text_list = augmenter.augment(s)
     augmented_s = "The firedrake warrior is a panda"
     assert augmented_s in augmented_text_list
+    
+
+def test_CLARE_augmenrter():
+    pass
