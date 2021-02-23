@@ -160,6 +160,8 @@ class Attacker:
             idx = worklist.popleft()
             i += 1
             example, ground_truth_output = self.dataset[idx]
+            if (i<5):
+                print("self.dataset[idx]:", example, ground_truth_output)
             example = textattack.shared.AttackedText(example)
             if self.dataset.label_names is not None:
                 example.attack_attrs["label_names"] = self.dataset.label_names

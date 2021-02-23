@@ -40,4 +40,5 @@ class UntargetedClassification(ClassificationGoalFunction):
         if (model_output.numel() == 1) and isinstance(self.ground_truth_output, float):
             return abs(model_output.item() - self.ground_truth_output)
         else:
+            print('ground truth output: ', self.ground_truth_output)
             return 1 - model_output[self.ground_truth_output]
